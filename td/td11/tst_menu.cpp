@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include <vector>
 using namespace std;
 
 #include "menu_item.h"
@@ -61,7 +62,7 @@ void recently_action() { cout << "************** Open recent file " << endl; }
 //
 int main()
 {
-
+       
 	vector<Menu_Item *> prefs_sub_items;
     prefs_sub_items.push_back( new Simple_Menu_Item("general", general_prefs_action) );
     prefs_sub_items.push_back( new Simple_Menu_Item("battery", battery_prefs_action) );
@@ -77,6 +78,7 @@ int main()
 
 	// Displaying the menu in an infinite loop
     for (;;) The_Menu.activate();
+    
     return 0;
 }
 
